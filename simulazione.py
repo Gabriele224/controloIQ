@@ -188,3 +188,20 @@ if st.button("Calcolo insulina giornaliera"):
 else:
     st.write("\n")
 
+st.title("Bolo Correttivo")
+
+misurazione=st.number_input("Glicemia", min_value=40, max_value=800)
+fsi_box= [70]
+fsi_select= st.selectbox("FSI", fsi_box)
+target_micro=120
+
+if st.button("Bolo Rapido"):
+
+    if misurazione >= 30:
+
+        calcolo_bolo= (misurazione - target_micro) / fsi_box
+        st.write(f"Bolo Rapido (ON)\n{calcolo_bolo}")
+    else:
+        st.write("error")
+else:
+    st.write("\n")
