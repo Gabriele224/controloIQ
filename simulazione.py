@@ -199,8 +199,8 @@ if st.button("Bolo Rapido"):
 
     if misurazione >= 30:
 
-        calcolo_bolo= (misurazione - target_micro) / fsi_box
-        st.write(f"Bolo Rapido (ON)\n{calcolo_bolo}")
+        calcolo_bolo= (misurazione - target_micro) / fsi_select
+        st.write(f"Bolo Rapido (ON)\n{calcolo_bolo:.2f}")
     else:
         st.write("error")
 else:
